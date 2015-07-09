@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+		<script type="text/javascript" src="./js/bundle.js"></script>
+		
+	</head>
+	<body>
+		<h1>Hello world</h1>
+		<a href="javascript:STATE.USERS_SHOW()">User</a>
+		<a href="javascript:STATE.USER_NEW()">New User</a>
+		
+		<div style="float:left;">
+			<div data-view="view1"></div>
+			<div data-view="view2"></div>
+		</div>
+		<div data-model="DIALOG_STORE" data-style="display: ${}" id="dialog" style="display: none;">
+			<div id="dialog-content" data-view="dialog"></div>
+		</div>
+	</body>
+</html>

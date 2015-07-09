@@ -1,0 +1,75 @@
+[
+	{
+		"name": "USERS_SHOW",
+		"url": "users",
+		"views" : [
+			{
+				"name": "view1",
+				"html": "users",
+				"stores": ["USERS_STORE"]
+			}
+		]
+	},
+	
+	{
+		"name": "USER_SELECT",
+		"url": "user/:id",
+		"views" : [
+			{
+				"name": "view1",
+				"html": "users",
+				"stores": ["USERS_STORE"]
+			},
+			{
+				"name": "view2",
+				"html": "selected_user",
+				"stores": ["USERS_STORE", "USER_STORE"]
+			}
+		]
+	},
+	
+	{
+		"name": "USER_NEW",
+		"url": "user_new",
+		"views" : [
+			{
+				"name": "view1",
+				"html": "users",
+				"stores": ["USERS_STORE"]
+			},
+			{
+				"name": "view2",
+				"html": "new_user",
+				"stores": ["USERS_STORE", "USER_STORE"]
+			}
+		]
+	},
+	
+	{
+		"name": "USER_DELETE_DIALOG",
+		"url": "user/delete/:id",
+		"views" : [
+			{
+				"name": "view1",
+				"html": "users",
+				"stores": ["USERS_STORE"]
+			},
+			{
+				"name": "view2",
+				"html": "selected_user",
+				"stores": ["USERS_STORE", "USER_STORE"]
+			},
+			{
+				"name": "dialog",
+				"html": "dialog_user_delete",
+				"stores": ["DIALOG_STORE"]
+			}
+		]
+	},
+	
+	{
+		"name": "INDEX",
+		"url": ".*",
+		"redirect": "USERS_SHOW"
+	}
+]

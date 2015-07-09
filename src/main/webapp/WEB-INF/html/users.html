@@ -1,0 +1,14 @@
+<h3>Users:</h3>
+ <button onclick="ACTIONS.USERS_REFRESH()">Refresh</button>
+
+ <table data-model="USERS_STORE">
+ 	<tr>
+ 		<th>ID</th>
+ 		<th>Name</th>
+ 	</tr>
+ 	<tr data-repeat="USERS_STORE">
+ 		<td data-onClick="STATE.USER_SELECT({id: ${id} });">${id}</td>
+ 		<td>${name}</td>
+ 		<td><button data-onclick="STATE.USER_DELETE_DIALOG({id: ${id} });">Delete</button></td>
+ 	</tr>
+ </table>
